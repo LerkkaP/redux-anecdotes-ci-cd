@@ -22,7 +22,8 @@
     "test": "jest",
     "eject": "react-scripts eject",
     "eslint": "eslint './**/*.{js,jsx}'",
-    "server": "json-server -p3001 --watch db.json"
+    "server": "json-server -p3001 --watch db.json",
+    "test:e2e": "cypress open"
   },
   "eslintConfig": {
     "extends": [
@@ -31,7 +32,10 @@
     ]
   },
   "jest": {
-    "testEnvironment": "jsdom"
+    "testEnvironment": "jsdom",
+    "testPathIgnorePatterns": [
+      "e2e-tests"
+    ]
   },
   "browserslist": {
     "production": [
@@ -50,6 +54,7 @@
     "@babel/preset-react": "^7.24.1",
     "@testing-library/jest-dom": "^6.4.2",
     "@testing-library/react": "^15.0.2",
+    "cypress": "^13.7.3",
     "eslint": "^8.57.0",
     "eslint-plugin-cypress": "^2.15.1",
     "eslint-plugin-react": "^7.34.1",
