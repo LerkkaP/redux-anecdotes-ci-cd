@@ -3,16 +3,8 @@ import axios from 'axios'
 const baseUrl = 'http://localhost:3001/anecdotes'
 
 const getAll = async () => {
-  try {
-    const response = await axios.get(baseUrl)
-    // eslint-disable-next-line no-console
-    console.log('getAll response:', response.data)
-    return response.data
-  } catch (error) {
-    // eslint-disable-next-line no-console
-    console.error('Error fetching anecdotes:', error)
-    throw error
-  }
+  const response = await axios.get(baseUrl)
+  return response.data
 }
 
 const createNew = async (content) => {
