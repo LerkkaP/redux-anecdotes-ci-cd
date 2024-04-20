@@ -25,4 +25,4 @@ jobs:
         uses: cypress-io/github-action@v6
         with:
           start: npm run start-prod
-          wait-on: http://localhost:5000
+          wait-on: 'http://localhost:5000,http://localhost:3001'
