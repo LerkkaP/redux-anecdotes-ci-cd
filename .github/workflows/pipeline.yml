@@ -22,4 +22,6 @@ jobs:
       - name: test
         run: npm run test
       - name: e2e tests
-        run: npm run start-prod
+        with:
+          start: npm run start-prod
+          wait-on: http://localhost:3001/anecdotes
