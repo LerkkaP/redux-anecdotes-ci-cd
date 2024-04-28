@@ -12,6 +12,10 @@ app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'dist', 'index.html'))
 })
 
+app.get('/health-check', (req, res) => {
+  res.status(500).send('Health check failed')
+})
+
 app.listen(port, () => {
   // eslint-disable-next-line no-console
   console.log(`Server is running on port ${port}`)
